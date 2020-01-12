@@ -1,0 +1,24 @@
+<ul class="nav navbar-dark bg-primary" id="navId">
+    <li class="nav-item">
+        <a class="navbar-brand">Devanagari character recognizer</a>
+    </li>
+</ul>
+
+<div class="card float-right" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Prediction:</h5>
+      <h1 *ngIf="isPredicted">{{ charLabels[predictions] }}</h1>
+    </div>
+  </div>
+
+<div class="d-flex p-2">
+<canvas #canvas>
+</canvas>
+</div>
+
+<div class="btn-group col-md-2">
+    <button type="button" class="btn btn-primary mr-1" (click)="clearCanvas()">Clear</button>
+    <button type="button" class="btn btn-success" (click)="callPredict()">Predict</button>
+</div>
+
+
